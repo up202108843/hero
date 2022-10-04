@@ -13,15 +13,14 @@ public class Game {
         try {
             Terminal terminal = new
                 DefaultTerminalFactory().createTerminal();
-            Screen screen = new TerminalScreen(terminal);
+            screen = new TerminalScreen(terminal);
             screen.setCursorPosition(null); // we don't need a cursor
             screen.startScreen(); // screens must be started
             screen.doResizeIfNecessary(); // resize screen i
             } catch (
     IOException e) {
-        e.printStackTrace();
+            e.printStackTrace();
         }
-        run();
     }
     private int x = 10;
     private int y = 10;
@@ -32,10 +31,10 @@ public class Game {
         screen.clear();
         screen.setCharacter(x, y, TextCharacter.fromCharacter('X')[0]);
         screen.refresh();
-        KeyStroke key = screen.readInput();
-        processKey(key);
     }
     public void  run() throws IOException {
         draw();
+        KeyStroke key = screen.readInput();
+        processKey(key);
     }
 }
