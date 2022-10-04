@@ -1,4 +1,3 @@
-import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextCharacter;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.screen.Screen;
@@ -34,7 +33,7 @@ public class Game {
         screen.setCharacter(x, y, TextCharacter.fromCharacter('X')[0]);
         screen.refresh();
         KeyStroke key = screen.readInput();
-
+        processKey(key);
     }
     public void  run() throws IOException {
         draw();
