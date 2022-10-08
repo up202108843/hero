@@ -58,6 +58,7 @@ public class Game {
             draw();
             KeyStroke key = screen.readInput();
             processKey(key);
+            if (key.getKeyType() == KeyType.EOF) break;
         }
     }
 }
