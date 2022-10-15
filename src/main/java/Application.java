@@ -8,8 +8,8 @@ import com.googlecode.lanterna.terminal.Terminal;
 import java.io.IOException;
 
 public class Application {
-    public static void main(String[] args) throws IOException {
-        Game gm = new Game();
-        gm.run();
+    public static void main(String[] args) {
+        Game game = new Game();
+        game.run();
     }
 }
